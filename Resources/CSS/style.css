@@ -1,3 +1,145 @@
-body {
-    background-color: aqua;
+/*Global Styles*/
+
+
+html {
+    font-size: 20px;
+    font-family: 'Hind', sans-serif;
+    margin: -8px;
+}
+
+.lander {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    height: 850px;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*Header*/
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1;
+}
+
+.signature {
+    display: flex;
+}
+.ben {
+    margin-left: 5rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.schulze {
+    font-size: 3rem;
+}
+
+nav {
+    float: right;
+    margin-right: 4rem;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid black;
+}
+
+
+.github, .linkedin {
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.github {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 27px;
+}
+
+.linkedin {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+.contact {
+    display: inline;
+    margin: 0 40px 27px 30px;
+    cursor: pointer;
+}
+
+
+/*Main*/
+
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template: 2fr 1fr / 1fr 2fr;
+    height: 800px;
+}
+
+.projects {
+    border: 2px solid black;
+    border-radius: 25px;
+    grid-area: 1 / 1 / 1 / 1;
+    text-align: center;
+    height: 500px;
+    width: 375px;
+    margin-left: 5rem;
+}
+
+.project {
+    text-decoration: underline;
+    display: block;
+    font-weight: 500;
+    margin: 50px 0;
+}
+
+.hero {
+    grid-area: 1 / 2 / 1 / 2;
+    margin-left: 6rem;
+}
+
+h1 {
+    font-size: 64px;
+    text-align: left;
+    line-height: 0;
+}
+
+.name {
+    text-align: left;
+    margin-left: 7%;
+}
+
+.webdev {
+    text-align: left;
+    margin-left: 11%;
+    line-height: 4rem;
+}
+
+.see {
+    text-align: left;
+    margin-left: 16%;
+    line-height: 4rem;
+}
+
+.pointer {
+    grid-area: 2 / 1 / 2 / 1;
+    text-align: center;
+    margin-left: 5rem;
+    width: 375px;
+}
+
+.scroll {
+    margin-bottom: 1.3rem;
+}
+
+.arrow {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
 }
