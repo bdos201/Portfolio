@@ -3,19 +3,29 @@
 
 html {
     font-size: 20px;
-    font-family: 'Hind', sans-serif;
-    margin: -8px;
+    font-weight: 100;
+    font-family: 'Mingzat', sans-serif;
+    background-color: #63C3DB;
+}
+
+body {
+    margin: 0;
 }
 
 .lander {
-    display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
-    height: 850px;
+    height: 100%
 }
 
 a {
     cursor: pointer;
+    font-size: 18px;
+    color: black;
 }
+
+a:hover {
+    font-weight: 600;
+}
+
 
 /*Header*/
 
@@ -23,85 +33,125 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    grid-row: 1;
+    height: 80px;
+    background-color: #327C8F;
 }
 
 .signature {
     display: flex;
+    color: #c4b730;
 }
+
 .ben {
     margin-left: 5rem;
-    margin-right: 1rem;
+    margin-right: 10px;
+    margin-top: -.85rem;
     font-size: 2rem;
 }
 
 .schulze {
     font-size: 3rem;
+    margin-top: -.85rem;
 }
 
 nav {
     float: right;
-    margin-right: 4rem;
+    margin-right: 12rem;
     display: flex;
     align-items: flex-end;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 1px;
+    transition: 500ms;
 }
 
+nav:hover {
+    transition: 600ms;
+    padding-left: 50px;
+}
 
 .github, .linkedin {
     display: inline-block;
     margin: 0 20px;
-    cursor: pointer;
 }
 
 .github {
-    height: 70px;
-    width: 70px;
-    margin-bottom: 27px;
+    height: 34px;
+    width: 34px;
+    padding: 5px;
+    transition: 600ms;
+    border-radius: 17px;
+}
+
+.github:hover {
+    transition: 600ms;
+    transform: scale(1.05);
+    background-color: #DBCF4D;
 }
 
 .linkedin {
-    height: 80px;
-    width: 80px;
-    margin-bottom: 20px;
-}
-.contact {
-    display: inline;
-    margin: 0 40px 27px 30px;
-    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    transition: 600ms;
 }
 
+.linkedin:hover {
+    transition: 600ms;
+    transform: scale(1.05);
+    background-color: #DBCF4D;
+    border-radius: 5px;
+}
+
+.contact {
+    display: inline-block;
+    margin: 0 30px 10px 15px;
+    cursor: pointer;
+    line-height: 1.65rem;
+    font-size: 24px;
+    padding: 0 5px;
+    transition: 600ms;
+}
+
+.contact:hover {
+    transition: 600ms;
+    transform: scale(1.05);
+    background-color: #DBCF4D;
+    border-radius: 5px;
+}
 
 /*Main*/
 
 
 main {
-    grid-row: 2;
     display: grid;
-    grid-template: 2fr 1fr / 1fr 2fr;
-    height: 800px;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
 }
 
 .projects {
-    border: 2px solid black;
-    border-radius: 25px;
-    grid-area: 1 / 1 / 1 / 1;
+    border-right: 2px solid black;
+    border-radius: 1px;
+    grid-column: 1;
     text-align: center;
-    height: 500px;
+    height: 100%;
     width: 375px;
-    margin-left: 5rem;
+    padding-left: 6rem;
+    padding-top: 3rem;
 }
 
 .project {
     text-decoration: underline;
     display: block;
     font-weight: 500;
+    font-size: 16px;
     margin: 50px 0;
 }
 
 .hero {
-    grid-area: 1 / 2 / 1 / 2;
-    margin-left: 6rem;
+    padding-top: 3rem;
+    grid-column: 2;
+    margin-left: 5rem;
+    border-bottom: 2px dotted black;
+    border-radius: 1px;
 }
 
 h1 {
@@ -110,9 +160,29 @@ h1 {
     line-height: 0;
 }
 
+.hero-name, .hero-webdev, .hero-see {
+    font-size: 30px;
+    padding-right: 75px;
+    padding-left: 15px;
+    border-radius: 40px;
+    box-shadow: 10px 10px;
+    transition: 500ms;
+}
+
 .name {
     text-align: left;
     margin-left: 7%;
+}
+
+.hero-name {
+    color: #ecde41;
+    background-color: #327C8F;
+    text-decoration: underline;
+}
+
+.hero-name:hover {
+    box-shadow: -10px 10px;
+    transition: 500ms;
 }
 
 .webdev {
@@ -121,25 +191,59 @@ h1 {
     line-height: 4rem;
 }
 
+.hero-webdev {
+    color: #eb2f71;
+    background-color: #c4b730;
+    text-decoration: underline;
+}
+
+.hero-webdev:hover {
+    box-shadow: -10px 10px;
+    transition: 500ms;
+}
+
 .see {
     text-align: left;
     margin-left: 16%;
     line-height: 4rem;
 }
 
+.hero-see {
+    color: #28ff56;
+    background-color: #3B59A8;
+    text-decoration: underline;
+}
+
+.hero-see:hover {
+    box-shadow: -10px 10px;
+    transition: 500ms;
+}
+
+.hero-see:active {
+    transform: translate(0, 3px);
+}
+
 .pointer {
-    grid-area: 2 / 1 / 2 / 1;
     text-align: center;
-    margin-left: 5rem;
+    margin-left: 6rem;
     width: 375px;
+    margin-top: 4rem;
 }
 
 .scroll {
-    margin-bottom: 1.3rem;
+    font-size: 17px;
 }
 
 .arrow {
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    transition: 300ms;
+}
+
+.arrow:hover {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 300ms
 }
