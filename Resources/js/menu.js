@@ -29,3 +29,11 @@ sidebar_btn.addEventListener('click', function () {
     };
 
 });
+
+sidebar_btn.addEventListener('mouseover', function () {
+     sidebar_arrow.classList.toggle('hover');
+});
+
+sidebar_btn.addEventListener('mouseout', function () {
+    sidebar_arrow.classList.toggle('hover');
+});
