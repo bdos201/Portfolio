@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+    <title>Ben Schulze</title>
+</head>
+<body>
+    <header>
+        <div class="signature">
+            <h3 class="ben">Ben</h3>
+            <h2 class="schulze">Schulze</h2>            
+        </div>
+        <nav class="desktop-nav">
+            <a href="https://github.com/bdos201?tab=repositories" target="_blank">
+                <img class="github" src="./Resources/Images/github.png">
+            </a>
+            <a href="www.linkedin.com/in/benjamin-schulze-dev" target="_blank">
+                <img class="linkedin" src="./Resources/Images/linkedin.png">
+            </a>
+            <a href="./index.html">
+                <h2 class="projects">Projects</h2>
+            </a>   
+        </nav>
+        <div class="burger-icon">
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="./index.html" target="_blank">Projects</a>
+            <a href="https://github.com/bdos201?tab=repositories" target="_blank">GitHub</a>
+            <a href="www.linkedin.com/in/benjamin-schulze-dev" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="greeting">Let's get in touch.</h1>
+        <section class="contact-form">
+            <form action="#" method="POST">
+                <label for="name"> Full Name* </label>
+                <br>
+                <input id="name" name="name" type="text" minlength="3" maxlength="30" required>
+                <br>
+                <label for="email"> E-Mail* </label>
+                <br>
+                <input id="email" name="email" type="text" minlength="5" maxlength="40" required>
+                <br>
+                <label for="subject"> Subject* </label>
+                <br>
+                <input id="subject" name="subject" type="text" minlength="1" maxlength="50" required>
+                <br>
+                <label for="message"> Message* </label>
+                <br>
+                <textarea id="message" name="message"  minlength="10" maxlength="556" required></textarea>
+                <br>
+                <input id="submit" type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <script src="./resources/js/mobile-nav.js"></script>
+</body>
+</html>

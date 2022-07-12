@@ -53,6 +53,7 @@ header {
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: -1.9rem;
+    z-index: 99;
 }
 
 .ben {
@@ -67,7 +68,7 @@ header {
     transition: 500ms;
 }
 
-nav {
+.desktop-nav {
     float: right;
     margin-right: 12rem;
     display: flex;
@@ -77,9 +78,89 @@ nav {
     transition: 500ms;
 }
 
-nav:hover {
+.desktop-nav:hover {
     transition: 600ms;
     padding-left: 50px;
+}
+
+.burger-icon {
+    display: none;
+    float: right;
+    margin-left: 3rem;
+    width: 35px;
+    align-items: flex-end;
+    justify-content: end;
+    transition: 600ms;
+}
+
+.hamburger {
+    margin-bottom: .5rem;
+    cursor: pointer;
+    z-index: 99;
+    transition: 600ms;
+    
+    appearance: none;
+    background:none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar,
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 300ms;
+    border-radius: 3px;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg);
+}
+
+.hamburger.is-active .bar {
+    display: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    display: block;
+    left: 100%;
+    transition: 400ms;
+    background: rgb(213,235,247);
+    background: linear-gradient(90deg, rgba(213,235,247,1) 39%, rgba(224,245,250,1) 50%, rgba(207,228,244,1) 73%);
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+    text-align: center;
+    z-index: 98;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    margin: 30px 15%;
+    padding: .8rem 0;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 15px;
+    background-color: #ecfcff;
+    transition: 200ms;
+}
+
+.mobile-nav a:hover {
+    background-color: #e0e9e9;
 }
 
 .github, .linkedin {
@@ -130,24 +211,55 @@ nav:hover {
 
 /*Header Media Queries*/
 
-@media only screen and (max-width: 1034px) {
-    nav:hover {
-        padding-left: 0;
+
+@media only screen and (max-width: 1200px) {
+    .desktop-nav {
+        margin-right: 1rem;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .ben {
-        margin-left: 0;
+        margin-left: 1rem;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    nav {
+    .desktop-nav {
         display: none;
+    }
+    .burger-icon {
+        display: flex;
     }
     header {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .ben {
+        font-size: 22px;
+        margin-top: 2.5rem;
+    }
+    .schulze {
+        font-size: 28px;
+        margin-top: 3.4rem;
+    }
+    .hamburger {
+        margin-bottom: 1rem;
+    }
+    .hamburger .bar,
+    .hamburger::before,
+    .hamburger::after {
+        width:27px;
+        height: 3px;
+        margin: 5px 0;
+    }
+    .hamburger.is-active::before {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    .mobile-nav a {
+        font-size: 18px;
     }
 }
 
@@ -422,14 +534,6 @@ h1 {
     }
     h1 {
         font-size: 28px;
-    }
-    .ben {
-        font-size: 22px;
-        margin-top: 2.5rem;
-    }
-    .schulze {
-        font-size: 28px;
-        margin-top: 3.4rem;
     }
 }
 

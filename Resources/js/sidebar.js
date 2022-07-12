@@ -1,3 +1,19 @@
+/*Mobile Nav Menu Functionality*/
+
+
+const hamburger = document.querySelector('.hamburger');
+const mobile_nav = document.querySelector('.mobile-nav');
+
+
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('is-active');
+    mobile_nav.classList.toggle('is-active');
+});
+
+
+/*Sidebar Functionality*/
+
+
 const sidebar_btn = document.querySelector('.sidebar-btn');
 
 const projects = document.querySelector('.projects');
